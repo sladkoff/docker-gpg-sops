@@ -14,10 +14,6 @@ command=$@
 
 directoryname=$(pwd)
 
-echo $directoryname
-
-echo $command
-
 docker run -it -v ~/.gnupg:/root/.gnupg \
     -v $directoryname:/root/secrets sldk/gpg-sops:latest $command
 ```
